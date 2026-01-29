@@ -1,0 +1,19 @@
+.master-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    
+}
+
+
+.cards-component{
+    display: grid;
+    grid-column: 1/2;
+}
+
+.cart-component{
+    display: grid;
+    grid-column: 2/3;
+    
+}
+

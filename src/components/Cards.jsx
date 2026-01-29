@@ -7,8 +7,9 @@ export default function Cards({plants,addToCart}){
 
     return(
         <>
-    <h2>Plants</h2>
     <div>
+    <h2>Plants</h2>
+    
     {plants.map((plant)=>(
         
        
