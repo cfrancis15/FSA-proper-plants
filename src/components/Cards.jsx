@@ -1,14 +1,8 @@
-import React from "react"
-//import PLANTS from "../data"
-//import { useState } from "react"
+import React, { useState } from "react"
+import './cards.css'
 
 
-export default function Cards({plants}){
-
-
-    
-    console.log(plants)
-
+export default function Cards({plants,addToCart}){
 
 
     return(
@@ -18,15 +12,25 @@ export default function Cards({plants}){
     {plants.map((plant)=>(
         
        
-            <p key={plant.id}>
-            {plant.name} | 
-            {plant.id} |
-            {plant.image}
-            </p>
+            <div 
+            className="plant-box"
+            key={plant.id}
+            >
+            <p>{plant.name}</p>
+            <p>{plant.id}</p>
+            <p>{plant.image}</p>
+            <button
+            onClick={(e)=>{
+            e.preventDefault()
+                addToCart(plant)
+            }}
+            >Add to Cart</button>
+            </div>
         
         
     ))}
     </div>
+
 
     </>
     
